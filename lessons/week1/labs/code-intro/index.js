@@ -33,7 +33,7 @@
 */
 
 // CODE HERE
-let speed = 25;
+
 
 
 
@@ -55,8 +55,7 @@ let speed = 25;
 */
 
 // CODE HERE
-speed = 500
-console.log(speed)
+
 
 
 
@@ -78,7 +77,7 @@ console.log(speed)
 
 // CODE HERE
 
-let faveSnack = 'Cheese-its'
+
 
 
 
@@ -97,7 +96,7 @@ let faveSnack = 'Cheese-its'
 
 // CODE HERE
 
-let faveDrink = 'Dr. pepper';
+
 
 
 
@@ -117,7 +116,6 @@ let faveDrink = 'Dr. pepper';
 
 // CODE HERE
 
-const private = true;
 
 
 
@@ -149,11 +147,7 @@ const private = true;
 */
 
 // CODE HERE
-let netflix = 15;
-let hulu = 7;
-let disneyPlus = 5;
-let youTubePremium = 10; 
-let peacock = 10;
+
 
 
 
@@ -172,8 +166,9 @@ let peacock = 10;
 
 // CODE HERE
 
-let total = netflix + hulu + disneyPlus + youTubePremium + peacock
-console.log(total)
+
+
+
 
 
 ///// PROBLEM 8 /////
@@ -194,9 +189,7 @@ console.log(total)
 */
 
 // CODE HERE
-hulu = hulu - 7;
-peacock = peacock - 5;
-netflix = netflix - 7; 
+
 
 
 
@@ -214,8 +207,7 @@ netflix = netflix - 7;
 */
 
 // CODE HERE
-let newTotal = hulu + peacock + netflix + disneyPlus + youTubePremium
-console.log(newTotal)
+
 
 
 
@@ -271,6 +263,9 @@ console.log(newTotal)
 */
 
 // CODE HERE
-let savings = (1 - (newTotal / total)) * 100 
 
-console.log(savings)
+
+
+
+
+
