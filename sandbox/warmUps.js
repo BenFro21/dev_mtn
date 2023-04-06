@@ -21,19 +21,38 @@ let maxOfTwo = (x,y) => {
 // Write a program that counts from 1 to 50 in fizzbuzz fashion.
 // To do so, loop from 1 to 50 (inclusive).
 //  Each time through, if the number is evenly divisible by 3, say ‘fizz’. If the number is evenly divisible by 5, say ‘buzz’. If the number is evenly divisible by both 3 and 5, say ‘fizzbuzz’. Otherwise, say the number.
+// ```js
+// let fizzBuzz = (num) => {
+//     for( let i=1; i <= num; i++){
+//         if ( i % 3 === 0 && i % 5 === 0){
+//             console.log('FizzBuzz')
+//         }else if (i % 3 === 0){
+//             console.log('fizz')
+//         }else if (i % 5 === 0){
+//             console.log('buzz')
+//         }else {
+//             console.log(i)
+//         }
+//     }
+// }
+// fizzBuzz(50)
+// ```
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Starting array
 ```js
-let fizzBuzz = (num) => {
-    for( let i=1; i <= num; i++){
-        if ( i % 3 === 0 && i % 5 === 0){
-            console.log('FizzBuzz')
-        }else if (i % 3 === 0){
-            console.log('fizz')
-        }else if (i % 5 === 0){
-            console.log('buzz')
-        }else {
-            console.log(i)
-        }
+let array = [28, 43, -12, 30, 4, 0, -36]
+// Write your solution below:
+let largest = 0
+let smallest = 0
+for(i = 0; i < array.length; i++){
+    if(array[i] > largest){
+        largest = array[i]
+    }
+    if(array[i] < smallest){
+        smallest = array[i]
     }
 }
-fizzBuzz(50)
+console.log(largest, smallest)
 ```
