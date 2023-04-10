@@ -12,6 +12,8 @@
 */
 
 //CODE HERE
+let helloWorld = () => console.log('hello world')
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -22,6 +24,9 @@
 
 //CODE HERE
 
+let jsNinja = () => console.log('I am a Javascript ninja!')
+jsNinja()
+
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,6 +36,11 @@
 */
 
 //CODE HERE
+
+let printName = (name) => {
+  console.log(name)
+}
+printName('Ben')
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -45,6 +55,9 @@
 
 //CODE HERE
 
+let greeting =(n) => console.log(`Hello ${n}`)
+
+greeting('Melissa')
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -59,6 +72,11 @@
 
 //CODE HERE
 
+let compareNums = (num1, num2) => {
+  num1 > num2 ? console.log(num1): console.log(num2)
+
+}
+compareNums(5,5)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -70,6 +88,12 @@
 
 //CODE HERE
 
+let add = (num1, num2) => {
+return Number(num1) + Number(num2)
+}
+
+let sum = add('5',5)
+console.log(sum)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -84,7 +108,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -99,7 +123,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -110,7 +134,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => str.toUpperCase() + '!!!'
+console.log(exclaimThree('hello ben'))
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -124,7 +149,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -139,6 +164,17 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+let nameCheck = (name) => {
+  if(name === 'Steven'){
+    console.log('WHat is up steven?')
+  }else if(name === 'Bryan'){
+    console.log('Hey Bryan! ')
+  }else{
+    console.log(`Cool name ${name}`)
+  }
+}
+
+let nameGreeting = nameCheck('Ben')
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -152,6 +188,20 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+let faveColorFinder = (color) => {
+  if(color === 'red'){
+    return 'Red is a great Color'
+  }else if(color === 'green'){
+    return 'green is a solid favorite color'
+  }else if(color === 'black'){
+    return 'so trendy'
+  }else{
+    return 'you need to evaluate your favortie color choice'
+  }
+}
+
+let colorRating = faveColorFinder('black')
+console.log(colorRating)
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -163,6 +213,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let printAllNames = (arr) => {
+  for(let i=0; i < arr.length; i++){
+    console.log(arr[i])
+  }
+}
+
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -174,6 +231,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let thatsOdd = (num) => {
+  if(num % 2 === 0){
+    console.log('That is not Odd!')
+  }else{
+    console.log('That is odd indeed!')
+  }
+}
+let oddChecker = thatsOdd(2)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -186,6 +251,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+let bestMovie = (movie) => console.log(`${movie} is the best movie ever!`)
+
+bestMovie('Sharknado')
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -200,6 +268,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+let bigOrSmall = (arr) => {
+  let answers =[];
+  for(i=0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    }else{
+      answers.push('small')
+    }
+  }
+  return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -211,7 +293,19 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+let theEliminator = (conArr, loser) => {
+  let newContestArr = []
+  for(let i =0; i < conArr.length; i++){
+    if(conArr[i] !== loser){
+     
+     newContestArr.push(conArr[i])
 
+    }
+  
+  }
+  return newContestArr
+}
+console.log(theEliminator(contestants, loser))
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -221,6 +315,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+let capStr = (str) => str.toUpperCase()
+
+console.log(capStr(sampleString))
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -234,6 +332,18 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+  email = String(email).trim()
+
+  if (email.includes('@')) {
+    return 'email verified'
+  } else {
+    return 'must provide a valid email address'
+  }
+}
+emailCheck(`ben@tcfood.com`)
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -241,6 +351,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+function frogPurchaser(gold) {
+  return gold / 3
+}
+
+let totalFrogs = frogPurchaser(100)
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -250,6 +366,18 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function frogPurchaser2(gold) {
+  if (gold % 3 === 0) {
+    return gold / 3
+  } else if ((gold - 1) % 3 === 0) {
+    return (gold - 1) / 3
+  } else {
+    return (gold - 2) / 3
+  }
+}
+
+let totalFrogs2 = frogPurchaser2(100)
+
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -258,6 +386,22 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+
+
+
+function checkArrayAscending(arr) {
+  let comparisonValue = arr[0]
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false
+    } else {
+      comparisonValue = arr[i]
+    }
+  }
+  return true
+}
+
+let arrayIsAscending = checkArrayAscending(sampleArray)
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -282,13 +426,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['fuck, rubberDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck', 'salorDuck', 'rubberDuck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck', "realDuck"]
