@@ -130,3 +130,7 @@ let maxOfTwo = (x,y) => {
 // // returns false
 // isPalindrom("racecar")
 // // returns true
+
+let capFirst = (str) => {
+
+}
