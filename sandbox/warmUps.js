@@ -66,22 +66,67 @@ let maxOfTwo = (x,y) => {
 // [0, 1, 2, 3, 4, 5] should log false because no two numbers add to 0.
 
 
-```js
-let arrZero = (arr) => {
-    let value = false;
-    for(let i =0; i < arr.length; i++){
-      for(let j=0; j < arr.length; j++){
-        if( i !== j){
-            if(arr[i] + arr[j] === 0){
-                value = true
-            }
-        }
-      }
-    }
-    return value
-}
+// ```js
+// let arrZero = (arr) => {
+//     let value = false;
+//     for(let i =0; i < arr.length; i++){
+//       for(let j=0; j < arr.length; j++){
+//         if( i !== j){
+//             if(arr[i] + arr[j] === 0){
+//                 value = true
+//             }
+//         }
+//       }
+//     }
+//     return value
+// }
 
-console.log(arrZero([1, 4, 11, 2, 37, -4]))
-console.log(arrZero([0, 21, 33, 6, 0, -9]))
-console.log(arrZero([0, 1, 2, 3, 4, 5]))
-```
+// console.log(arrZero([1, 4, 11, 2, 37, -4]))
+// console.log(arrZero([0, 21, 33, 6, 0, -9]))
+// console.log(arrZero([0, 1, 2, 3, 4, 5]))
+// ```
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given a number, n, return an array containing n unique random numbers between 1-10, inclusive. (That is, do not repeat any numbers in the returned list.)
+// You can trust that this function will never be called with n < 0 or n > 10.
+// For example:
+// luckyNumbers(2)
+// // returns (3, 7)
+// luckyNumbers(6)
+// returns (1, 7, 9, 6, 5, 2)
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given a word, return true if that word contains only unique characters. Return false otherwise.
+// For example:
+// hasUniqueChars("Monday")
+// // returns true
+// hasUniqueChars("Moonday")
+// // returns false
+// Uppercase and lowercase letters should be considered separately:
+// hasUniqueChars("Bob")
+// // returns true
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Return true if this word is a palindrome. false if it is not. A palindrome is a word that is spelled the same backwards and forwards.
+// For example:
+// isPalindrom("a")
+// // returns true
+// isPalindrom("noon")
+// // returns true
+// isPalindrom("hello")
+// // returns false
+// Treat spaces and uppercase letters normally—so “Racecar” wouldn’t be a palindrome since “R” and “r” aren’t the same letter:
+// isPalindrom("Racecar")
+// // returns false
+// isPalindrom("racecar")
+// // returns true
