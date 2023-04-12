@@ -15,11 +15,23 @@ The code above is an example of 'function declaration.' Please re-write the func
 */
 
 // RE-WRITE THE ABOVE FUNCTION IN 'FUNCTION EXPRESSION' SYNTAX HERE.
-
+let findGrapeExpression = function(arr){
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i].color === "purple") {
+            return console.log(`The fruit with index ${arr.indexOf(arr[i])} is a grape`)
+        } 
+    }
+}
 
 
 // RE-WRITE THE ABOVE FUNCTION IN 'ARROW FUNCTION' SYNTAX HERE.
-
+let findGrapaeArrow = () => {
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i].color === "purple") {
+            return console.log(`The fruit with index ${arr.indexOf(arr[i])} is a grape`)
+        } 
+    }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -29,8 +41,12 @@ Write a one line function (give a name of your choice) with an implicit return t
 
 // CODE HERE
 
+let paramReader = (param1, param2) => console.log(`The first parameter is ${param1}, the second parameter is ${param2}`)
+
 
 // INVOKE THE FUNCTION HERE. THE PARAMETERS TAKE ANY DATATYPE.
+
+// paramReader('param1', 'param2')
 
 
 ////////// PROBLEM 3 //////////
@@ -39,10 +55,20 @@ Write a function called 'greeting' that takes 3 parameters: firstName, lastName,
 Then, outside of the greeting function, invoke the greeting function, passing in the value firstName and lastName of your choice, and a callback function that takes a parameter of fullName. The callback function will print 'Hello, my full name is [fullName]'. 
 */
 
+
+
 // CODE 'GREETING FUNCTION' HERE
+let fullName = (first, last) => {
+    console.log(`Hello ${first} ${last}`)
+}
+
+let greeting = (firstName, lastName, cb) => {
+    cb(firstName, lastName)
+}
 
 
 // INVOKE 'GREETING FUNCTION' HERE
+// greeting('Ben', 'Broad', fullName)
 
 
 ////////// PROBLEM 4 //////////
@@ -59,13 +85,22 @@ Write a function called 'pricesPlusTax' that takes 2 params: an array ('prices' 
 
 // CODE HERE
 
+let pricesPlusTax = (arr, cb) => {
+    for(let i=0; i < arr.length; i++){
+       totalCost.push(arr[i] + arr[i] * .20 )
+    }
+    cb(totalCost)
+}
+
 
 /* 
 Invoke the 'pricesPlusTax' function, passing in the 'prices' array and a callback function (passing in 'totalCost' as a param) that will print "The new array plus tax = [totalCost]"
 */
 
 // CODE HERE
-
+pricesPlusTax(prices, (totalCost => {
+    console.log(`the new array plus tax = ${totalCost}`)
+}))
 
 ////////// PROBLEM 5 //////////
 
@@ -79,12 +114,25 @@ The inner function should run this logic: if the first number passing in is grea
 
 // CODE HERE
 
+let multiplyingFactory = (num) => {
+    return (num2) => {
+        if(num >= 5){
+            console.log(num * num2)
+        }else {
+            console.log(`Can not multiply the first number is smaller then 5`)
+        }
+    }
+}
+
 
 /* 
 Let's invoke the 'multiplyingFactory' function that will return another function, and save it into a variable called 'timesFour.' Let's pass in number 3 as a param.
 */
 
 // CODE HERE
+
+let timesFour = multiplyingFactory(5)
+
 
 
 /* 
@@ -96,6 +144,7 @@ Run the code in node to see the printed result. You should see "Cannot multiply:
 */
 
 // INVOKE 'timesFour' HERE
+timesFour(4)
 
 
 /* 
