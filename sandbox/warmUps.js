@@ -122,6 +122,22 @@ let maxOfTwo = (x,y) => {
 // hasUniqueChars("Bob")
 // // returns true
 
+// ```js
+// function hasUniqueChars(word) {
+//     const characters = word.split("");
+//     const seenCharacters = new Set();
+//     for (let i = 0; i < characters.length; i++) {
+//       if (seenCharacters.has(characters[i])) {
+//         return false;
+//       }
+//       seenCharacters.add(characters[i]);
+//     }
+//     return true;
+//   }
+//   console.log(hasUniqueChars("Monday"));
+//   console.log(hasUniqueChars("Moonday"));
+//   console.log(hasUniqueChars("Bob")); 
+//   ```
 
 
 
