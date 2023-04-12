@@ -3,7 +3,26 @@
 ////////////////////////
 
 // CODE HERE
+const add =(num1,num2) => num1 +num2
+const subtract = (num1, num2) => num1 - num2
+const multiply = (num1, num2) => num1 * num2
+const divide = (num1, num2) => num1 / num2
 
+const calculator = (num1, num2, cb) => {
+  // checking to see if num1 and num2 are numbers + is short hand for the Number function 
+  if(+num1 && +num2){
+    num1 = +num1
+    num2 = +num2
+    return cb(num1, num2)
+  }else {
+    return console.log(`please provide numbers only`)
+  }
+}
+
+console.log(calculator(10,2,divide))
+console.log(calculator(10,2,add))
+console.log(calculator(10,2,subtract))
+console.log(calculator(10,2,multiply))
 
 ///////////////////////
 ////// PET STORE //////
@@ -64,6 +83,54 @@ const catProducts = [
 ]
 
 // CODE HERE
+//apply discount by percentage or by rate, we have to pass discount as decimals, 25% = .25 
+const applyPercentDiscount = (product, discount) => {
+  product.displayPrice = product.basePrice * (1 - discount)
+}
+applyPercentDiscount(catProducts[0], .50)
+// console.log(catProducts[0])
+
+const applyFlatDiscount = (product, discount) => {
+  product.displayPrice = product.basePrice - discount
+}
+
+// higher order function that allows us to write a loop once and apply discounts 
+const applyDiscounts = (arr, cb, discount) => {
+  for(let i = 0; i< arr.length; i++){
+    cb(arr[i], discount)
+  }
+}
+
+applyDiscounts(dogProducts, applyFlatDiscount, 1)
+console.log(dogProducts)
+applyDiscounts(catProducts, applyPercentDiscount, .20)
+console.log(catProducts)
+
+
+//apply discount by catagories 
+const discountByCategory = (arr, cb, discount, category) => {
+  for(let i= 0; i < arr.length; i++){
+    if(arr[i].category === category){
+      cb(arr[i], discount)
+    }
+  }
+}
+
+// invoke the discountByCategory higher order function by giving it an arr, cb, discount, and catagory 
+discountByCategory(dogProducts, applyFlatDiscount, 2,1)
+discountByCategory(catProducts, applyPercentDiscount, .10,2)
+
+// apply discount by acording to inventory 
+const applyDiscountByInventory = (arr,cb,discount,amount) => {
+  for(let i = 0; i < arr.length; i++ ){
+    if(arr[i].inventory > amount){
+      cb(arr[i], discount)
+    }
+  }
+}
+
+
+
 
 
 ////////////////////////
