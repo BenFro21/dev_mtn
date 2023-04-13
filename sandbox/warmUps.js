@@ -160,6 +160,10 @@ let maxOfTwo = (x,y) => {
 // isPalindrom("racecar")
 // // returns true
 
-let capFirst = (str) => {
-
-}
+// ```js
+// let isPalindrom = (str) => {
+//     let newStr = str.split('').reverse().join('')
+//     console.log(newStr === str)
+// }
+// ```
+isPalindrom('hello')
