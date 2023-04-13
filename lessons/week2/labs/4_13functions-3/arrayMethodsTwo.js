@@ -11,6 +11,8 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+// numbers.forEach(num => console.log(num / 2))
+
 
 ////////// PROBLEM 2 //////////
 
@@ -24,6 +26,8 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+let mapedNums = numbers.map(num => num/2)
+// console.log(mapedNums)
 
 ////////// PROBLEM 3 //////////
 
@@ -50,6 +54,12 @@ let cities = [
 */
 
 // CODE HERE
+
+let citiesWithI = cities.filter(el => {
+  let splitWord = el.split('')
+  return splitWord[splitWord.length -1] === 'i'
+})
+// console.log(citiesWithI)
 
 
 ////////// PROBLEM 4 //////////
@@ -87,6 +97,16 @@ let fruits = [
 
 // CODE HERE
 
+// fruits.forEach((fruit, idx) => {
+//   if(fruit.color === 'red'){
+//     console.log(`The fruit with index ${idx} is an apple`)
+//   }else if(fruit.color === 'orange'){
+//     console.log(`The fruit with index ${idx} is an orange`)
+//   }else {
+//     console.log(`the fruit with index ${idx}is not an apple or an orange`)
+//   }
+// })
+
 
 
 /* 
@@ -100,7 +120,10 @@ let fruits = [
 */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
-
+// the fruit with index 0 is not an apple or an orange
+// The fruit with index 1 is an orange
+// the fruit with index 2 is not an apple or an orange
+// The fruit with index 3 is an apple
 
 
 ////////// PROBLEM 5 //////////
@@ -146,6 +169,14 @@ let foods = [
 
 // CODE HERE
 
+
+let totalFoodsWithRice = foods.filter((food) => {
+  return food.tags.includes("rice")
+}).reduce((a, food) => {
+  return a + food.price
+}, 0)
+
+console.log(totalFoodsWithRice)
 
 // THE TOTAL
 

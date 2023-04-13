@@ -18,7 +18,8 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 // CODE HERE
-const evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+const evenNumbers  = mixedNumbers.filter((el) => el % 2 === 0)
+// console.log(evenNumbers)
 
 
 
@@ -39,8 +40,8 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-const postTaxPrices // = prices.map(/* Provide Your Callback Here );
-
+const postTaxPrices  = prices.map((el) => el = el * 1.07 );
+// console.log(postTaxPrices)
 
 
 ////////// PROBLEM 3 //////////
@@ -57,15 +58,15 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation = populations.reduce((rt, curEl) =>  rt + curEl)
 
-
+// console.log(totalPopulation)
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
-{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
+const monstersInYourPocket = [
+{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
 {"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
 {"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
 {"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
@@ -82,7 +83,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter(el => el.CP >= 200)
+// console.log(myStrongest)
 
 
 
@@ -102,6 +104,11 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // CODE HERE
 
 
+let orderTotal = orders.map((el) => {
+  return el.price * (el.tax + 1)
+})
+// console.log(orderTotal)
+
 
 ////////// PROBLEM 6 //////////
 
@@ -120,3 +127,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const bobsTotal = purchases.filter(purchase => purchase.owner === 'Bob').reduce((a,c) => a + c.price, 0)
+
+console.log(bobsTotal)
