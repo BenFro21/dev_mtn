@@ -166,4 +166,41 @@ let maxOfTwo = (x,y) => {
 //     console.log(newStr === str)
 // }
 // ```
-isPalindrom('hello')
+// isPalindrom('hello')
+
+
+// Write a function called hasMoreVowels that takes in one argument, word. When the function is called, return true if that word contains more vowels than non-vowels; otherwise, return false. The word will always be a single word, without any punctuation or spaces. It will contain only uppercase and/or lowercase letters.
+// If the phrase is over half vowels, it should return true:
+// hasMoreVowels('moose')
+// // true
+// If it’s half vowels (or less), it’s false:
+// hasMoreVowels('mice')
+// // false
+// hasMoreVowels('graph')
+// // false
+// Don’t consider “y” as a vowel:
+// hasMoreVowels('yay')
+// // false
+// Uppercase vowels are still vowels:
+// hasMoreVowels('Aal')
+// // true
+
+// ```js
+// let hasMoreVowels = (word) => {
+//     let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I','O', 'U']
+//     let vowelCount = 0;
+//     let nonVowelCount =0;
+//     let splitWord = word.split('')
+//     for(let i = 0; i < splitWord.length; i++){
+//         let letter = splitWord[i]
+//        if(vowels.includes(letter)){
+//         vowelCount ++;
+//        }else if(!vowels.includes(letter)){
+//         nonVowelCount ++
+//        }
+//     }
+//     return vowelCount > nonVowelCount 
+// }
+// console.log(hasMoreVowels('hey'))
+// console.log(hasMoreVowels('eee'))
+// ```
