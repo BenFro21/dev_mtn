@@ -232,7 +232,6 @@ let maxOfTwo = (x,y) => {
 // let best = (arr) => {
 //     let maxProfit = 0;
 //     let minPrice = Infinity;
-
 //     for(let i=0; i < arr.length; i++){
 //         minPrice = Math.min(minPrice, arr[i])
 //         const potentialProfit = arr[i] - minPrice;
@@ -243,3 +242,33 @@ let maxOfTwo = (x,y) => {
 // console.log(best([2, 3, 10, 6, 4, 8, 1]))
 // console.log(best([5, 4 , 3, 2, 1]))
 // ```
+
+
+// In this challenge, you’ll write a decoder function. The function should take in a string and return a string.
+// Start by creating a function called decoder that has a single parameter called code.
+// Each code will be a sequence of numbers and letters, always starting with a number and ending with a letter(s).
+// Each number tells you how many characters to skip before finding a good letter. After each good letter should come the next next number.
+// For example, the string ‘hey’ could be encoded to ‘0h2xce5ngbrdy’. This means ‘skip 0, find the ‘h’, skip 2, find the ‘e’, skip 5, find the ‘y’.
+// So, if we passed ‘0h2xce5ngbrdy’ into your function, we should get ‘hey’ as a result.
+// Here are a few more examples:
+
+// '0h2xce5ngbrdy' => 'hey'
+// '3vdfn' => 'n'
+// '0r' => 'r'
+// '2bna0p1mp2osl0e' => 'apple'
+// '0y4akjfe0s' => 'yes'
+
+
+
+
+// Write a function called printDigits that takes in one argument, num. When given an integer, the function should print (console.log) each digit in reverse order, starting with the ones place. Do not do this by just turning the number into a string and reversing it. Solve the problem using math. (Hint: look up while loops, and don’t forget about the % operator.)
+// For example, if you were given 1 you should simply print 1, if given 314 you should print 4, 1, 3, and if given 12 you should print 2, 1:
+// printDigits(1)
+// // 1
+// printDigits(314)
+// // 4
+// // 1
+// // 3
+// printDigits(12)
+// // 2
+// // 1

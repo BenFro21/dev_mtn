@@ -1,0 +1,41 @@
+.bold{
+    font-weight: 800;
+}
+
+.color-primary {
+    color:green;
+}
+
+.color-secondary{
+    color: cyan;
+}
+
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.bg-color{
+    background-color: cyan;
+}
+
+.bg-color2{
+    background-color: blue;
+}
+
+.position-relative{
+    position: relative;
+    bottom: 102px;
+    left: 102px;
+}

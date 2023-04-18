@@ -1,0 +1,81 @@
+<!-- relative position will move an element relative to its original position in the document 
+
+fixed position will move an element relative to the viewport, regardless of scroll position
+
+absolute position will move an element relative to its nearest positioned ancestor
+If there are no positioned ancestors, it will use the viewport
+
+sticky postition will toggle between fixed and relative, based on scroll position
+The element remains relatively positioned until the scroll hits a specified position, then toggles to fixed
+
+z-index: Used to determine layers of positioned elements
+An element must have a position style in order to use the z-index
+The higher the value, the closer the element will be to the front
+
+block display elements stack vertically and take the whole width available
+You can set the height and width of block elements
+
+inline display elements stack horizontally
+The size of the content determines the height and width
+
+inline-block display elements stack horizontally as well
+But they also allow you to change height and width
+
+This property determines whether elements should wrap in the parent or not
+The default value is no-wrap
+To have them wrap, set flex-wrap: wrap;
+
+Determines horizontal position and spacing when the direction is row
+Determines vertical position and spacing when the direction is column
+Default value is flex-start
+
+Determines vertical position and spacing when the direction is row
+Determines horizontal position and spacing when the direction is column
+Default value is flex-start
+
+CSS property that determines how the total width and height of an element is calculated
+This property accepts two values, content-box or border-box.
+
+box-sizing: content-box
+This is the default value, the width and height properties include the content; padding, border, and margin are added on
+
+box-sizing: border-box
+The width and height properties include the content, padding, and border; margin is added on, meaning that padding and border will be inside of the box with the content
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssSandbox.css">
+    <title>Sandbox</title>
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li class="bold color-primary">Home</li>
+                <li class="bold color-primary">Contact Us</li>
+                <li class="bold color-primary">Settings</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="color-secondary">Welcome to our page!</p>
+        <p class="color-primary bold">We are so glad you are here</p>
+    </main>
+    <section class="flex"> 
+        <div class="box border"></div>
+        <div class="box border"></div>
+        <div class="box border"></div>
+
+    </section>
+    <section class="border">
+        <div class="box border bg-color"></div>
+        <div class="box border bg-color2 position-relative"></div>
+    </section>
+    
+</body>
+</html>
