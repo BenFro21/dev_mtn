@@ -20,8 +20,10 @@ let addMovie = (evt) => {
     inputField.value = ''
 }
 let deleteMovie = (evt) => {
+ evt.target.textContent = ''
     evt.target.parentNode.remove()
-    console.log(evt.target.parentNode.textContent)
+
+
     message.textContent = `${evt.target.parentNode.textContent} DELETED!!! `
     revealMessage()
 }
