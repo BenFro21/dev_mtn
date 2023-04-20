@@ -272,3 +272,14 @@ let maxOfTwo = (x,y) => {
 // printDigits(12)
 // // 2
 // // 1
+// ```js
+// let printDigits = (num) => {
+//     while(num > 0){
+//         let digit = num % 10
+//         console.log(digit)
+//         num = Math.floor(num / 10)
+//     }
+// }
+// ```
+// printDigits(12)
+// console.log(217 % 10)
