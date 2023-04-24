@@ -283,3 +283,19 @@ let maxOfTwo = (x,y) => {
 // ```
 // printDigits(12)
 // console.log(217 % 10)
+
+```js
+let decoder = (str) => {
+    const num = parseInt(str[0], 10);
+    console.log(num)
+    let decodedStr = '';
+    for (let i = 1; i < str.length; i++) {   
+      const charCode = str.charCodeAt(i) + num;
+      decodedStr += String.fromCharCode(charCode);
+    }
+    return decodedStr;
+}
+```
+console.log(decoder("1a"))
+console.log(decoder("3ce"))
+console.log(decoder("2fcjjm"))

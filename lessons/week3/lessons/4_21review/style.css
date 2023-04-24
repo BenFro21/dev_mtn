@@ -1,0 +1,62 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family-heading:sans-serif ;
+    --font-family-basic:sans-serif ;
+    --primary-color:#001219;
+    --secondary-color: #edf6fe ;
+}
+
+.header{
+    height: 10vh;
+    width:100vw;
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+    font-family: var(--font-family-heading);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-btn{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height:40px;
+    width: 100px;
+    position: relative;
+    bottom: 50px;
+    left: 40%;
+}
+
+#pizza-display{
+    display:flex;
+    justify-content: space-evenly;
+    height:40vh;
+    border:1px solid black;
+}
+
+.pizza-item{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+}
+
+/* For pizza pics in pizza dispaly */
+.pizza-item > img{
+    height: auto;
+    height: 80%;
+}
+
+.form-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
