@@ -284,18 +284,35 @@ let maxOfTwo = (x,y) => {
 // printDigits(12)
 // console.log(217 % 10)
 
-```js
-let decoder = (str) => {
-    const num = parseInt(str[0], 10);
-    console.log(num)
-    let decodedStr = '';
-    for (let i = 1; i < str.length; i++) {   
-      const charCode = str.charCodeAt(i) + num;
-      decodedStr += String.fromCharCode(charCode);
-    }
-    return decodedStr;
-}
-```
-console.log(decoder("1a"))
-console.log(decoder("3ce"))
-console.log(decoder("2fcjjm"))
+// ```js
+// let decoder = (str) => {
+//     const num = parseInt(str[0], 10);
+//     console.log(num)
+//     let decodedStr = '';
+//     for (let i = 1; i < str.length; i++) {   
+//       const charCode = str.charCodeAt(i) + num;
+//       decodedStr += String.fromCharCode(charCode);
+//     }
+//     return decodedStr;
+// }
+// ```
+// console.log(decoder("1a"))
+// console.log(decoder("3ce"))
+// console.log(decoder("2fcjjm"))
+
+//////////////////////////////////////////////////////////////////////////////
+//// 4-25 
+
+// ```js
+// let removeDuplicateLetters = (str) => {
+//   let uniqueStr = '';
+//   for(let i =0; i < str.length; i++){
+//     if(uniqueStr.indexOf(str[i]) === -1){
+//       uniqueStr += str[i]
+//     }
+//   }
+//   return uniqueStr
+// }
+// console.log(removeDuplicateLetters('helloworld'))
+// console.log(removeDuplicateLetters('iwanttoclimbamoutain'))
+// ```
