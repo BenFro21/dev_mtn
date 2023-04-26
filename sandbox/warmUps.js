@@ -318,6 +318,7 @@ let maxOfTwo = (x,y) => {
 // ```
 /////////////////////////////////////////////////
 ///////// 4/26
+```js
 let hasBalancedParentheses = (str) => {
     let count = 0;
     for(let i = 0; i < str.length; i++){
@@ -332,5 +333,5 @@ let hasBalancedParentheses = (str) => {
     }
     return count === 0;
 } 
-
 console.log(hasBalancedParentheses('((()))))'))
+```
