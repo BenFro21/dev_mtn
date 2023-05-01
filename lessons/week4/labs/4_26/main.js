@@ -20,6 +20,7 @@ let buttonFunc = () => {
             })
         }
     })
+    .catch(err => console.log(err))
 }
 
 //handleing the click event on the button element

@@ -318,20 +318,76 @@ let maxOfTwo = (x,y) => {
 // ```
 /////////////////////////////////////////////////
 ///////// 4/26
-```js
-let hasBalancedParentheses = (str) => {
-    let count = 0;
-    for(let i = 0; i < str.length; i++){
-        if(str[i] === '('){
-            count++;   
-        } else if(str[i] === ')'){
-            count--;
-            if(count < 0){
-                return false;
-            }
+// ```js
+// let hasBalancedParentheses = (str) => {
+//     let count = 0;
+//     for(let i = 0; i < str.length; i++){
+//         if(str[i] === '('){
+//             count++;   
+//         } else if(str[i] === ')'){
+//             count--;
+//             if(count < 0){
+//                 return false;
+//             }
+//         }
+//     }
+//     return count === 0;
+// } 
+// console.log(hasBalancedParentheses('((()))))'))
+// ```
+////////////////////////////////////////////////////////
+//////////////4-27
+// ```js
+// let tShirtSorter = (str) => {
+//     // set up three new vars for small, medium, large
+//     let strS = '';
+//     let strM = '';
+//     let strL = '';
+//     //loop over the string, checking if the string at index I is === to 's', 'm', or 'l'. if it is equal to any of those letters add it to the new stirngs we made. 
+//     for(i = 0; i < str.length; i++){
+//         if(str[i] === 's'){
+//             strS += str[i]
+//         }else if(str[i] === 'm'){
+//             strM += str[i]
+//         }else{
+//             strL += str[i]
+//         }
+//     }
+//     //return the new string values in the order of small, medium, large
+//     return strS + strM + strL
+// }
+// console.log(tShirtSorter('llllmmmmmsssss'))
+// ```
+
+//////5/1////////////////
+
+let findOutlier = (arr) => {
+    // variable to keep track of the number of odd and even intagers 
+    let numOdd = 0;
+    let numEven = 0;
+    // variables to store the current odd and even integers 
+    let currentOdd  = null;
+    let currentEven = null;
+    // loop through the array and cont the number of odds and evens
+    for(let i = 0; i < arr.length; i++){
+        const integer = arr[i]
+        if (integer % 2 === 0){
+            numEven++
+            currentEven = integer
+            console.log(currentEven)
+        }
+        else {
+            numOdd++
+            currentOdd = integer
+            console.log(currentOdd)
         }
     }
-    return count === 0;
-} 
-console.log(hasBalancedParentheses('((()))))'))
-```
+    //If we have found both an odd and even integer we can return the outlier
+    if(numOdd > 0 && numEven > 0) {
+        return numOdd > numEven ? currentEven : currentOdd
+    }
+}
+let arr1 = [2, 4, 0, 100, 4, 11, 2602, 36] 
+let arr2 = [160, 3, 1719, 19, 11, 13, -21]
+console.log(findOutlier(arr1))
+console.log(findOutlier(arr2))

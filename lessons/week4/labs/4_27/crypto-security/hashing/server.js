@@ -75,7 +75,13 @@ app.get("/", (req, res) => {
 // Handle user login.
 app.post("/login", (req, res) => {
   // TODO: Get the username and password from form data
+  const {username, password} = req.body
   // TODO: Attempt to retrieve the user from the database
+  for(let i=0; i< db.length; i++){
+    if(db[i].username === username){
+    
+    }
+  }
   // TODO: If the user exists, check if the password matches the user's password
   // TODO: Log the user in by storing their username in the session
   // TODO: Display a success message and redirect to /login/success
