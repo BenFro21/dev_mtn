@@ -361,33 +361,50 @@ let maxOfTwo = (x,y) => {
 
 //////5/1////////////////
 
-let findOutlier = (arr) => {
-    // variable to keep track of the number of odd and even intagers 
-    let numOdd = 0;
-    let numEven = 0;
-    // variables to store the current odd and even integers 
-    let currentOdd  = null;
-    let currentEven = null;
-    // loop through the array and cont the number of odds and evens
-    for(let i = 0; i < arr.length; i++){
-        const integer = arr[i]
-        if (integer % 2 === 0){
-            numEven++
-            currentEven = integer
-            console.log(currentEven)
-        }
-        else {
-            numOdd++
-            currentOdd = integer
-            console.log(currentOdd)
-        }
-    }
-    //If we have found both an odd and even integer we can return the outlier
-    if(numOdd > 0 && numEven > 0) {
-        return numOdd > numEven ? currentEven : currentOdd
-    }
-}
-let arr1 = [2, 4, 0, 100, 4, 11, 2602, 36] 
-let arr2 = [160, 3, 1719, 19, 11, 13, -21]
-console.log(findOutlier(arr1))
-console.log(findOutlier(arr2))
+// let findOutlier = (arr) => {
+//     // variable to keep track of the number of odd and even intagers 
+//     let numOdd = 0;
+//     let numEven = 0;
+//     // variables to store the current odd and even integers 
+//     let currentOdd  = null;
+//     let currentEven = null;
+//     // loop through the array and cont the number of odds and evens
+//     for(let i = 0; i < arr.length; i++){
+//         const integer = arr[i]
+//         if (integer % 2 === 0){
+//             numEven++
+//             currentEven = integer
+//             console.log(currentEven)
+//         }
+//         else {
+//             numOdd++
+//             currentOdd = integer
+//             console.log(currentOdd)
+//         }
+//     }
+//     //If we have found both an odd and even integer we can return the outlier
+//     if(numOdd > 0 && numEven > 0) {
+//         return numOdd > numEven ? currentEven : currentOdd
+//     }
+// }
+// let arr1 = [2, 4, 0, 100, 4, 11, 2602, 36] 
+// let arr2 = [160, 3, 1719, 19, 11, 13, -21]
+// console.log(findOutlier(arr1))
+// console.log(findOutlier(arr2))
+////////5/2/////////////////////////////
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+// Example:
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+// Don’t forget the space after the closing parentheses!
+// ```js
+// let createPhoneNumber = (arr) => {
+//     let var1 = arr.splice(0,3).join("")
+//     let var2 = arr.splice(0,3).join("")
+//     let var3 = arr.splice(0,4).join("")
+//     let phoneString = `(${var1}) ${var2}-${var3}`
+//     console.log(phoneString)
+// }
+// createPhoneNumber([1,2,3,4,5,6,7,8,9,0])
+// ```
