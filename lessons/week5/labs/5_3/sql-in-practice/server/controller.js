@@ -13,13 +13,13 @@ let nextEmp = 5
 
 module.exports = {
     getUpcomingAppointments: (req, res) => {
-        sequelize.query(`select a.appt_id, a.date, a.service_type, a.approved, a.completed, u.first_name, u.last_name 
-        from cc_appointments a
-        join cc_emp_appts ea on a.appt_id = ea.appt_id
-        join cc_employees e on e.emp_id = ea.emp_id
-        join cc_users u on e.user_id = u.user_id
-        where a.approved = true and a.completed = false
-        order by a.date desc;`)
+        sequelize.query(`SELECT a.appt_id, a.date, a.service_type, a.approved, a.completed, u.first_name, u.last_name 
+        FROM cc_appointments AS a
+        JOIN cc_emp_appts AS ea ON a.appt_id = ea.appt_id
+        JOIN cc_employees AS e ON e.emp_id = ea.emp_id
+        JOIN cc_users AS u ON e.user_id = u.user_id
+        WHERE a.approved = true AND a.completed = false
+        ORDER BY a.date desc;`)
             .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))
     },
