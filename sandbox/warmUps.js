@@ -468,22 +468,22 @@ var presents = [
     {size: "medium", clatters: "a bit", weight: "medium"},
     {size: "small", clatters: "yes", weight: "light"}
 ];
-// ```js
-// let guessGifts = (wish, pres) => {
-//     let result = [];
-//     wish.forEach(item => {
-//         pres.forEach(present => {
-//             if(
-//                 item.size === present.size &&
-//                 item.clatters === present.clatters && 
-//                 item.weight === present.weight && 
-//                 !result.includes(item.name)
-//                 ){
-//                     result.push(item.name)
-//                 }             
-//         })
-//     });
-//     return result
-// }
-// console.log(guessGifts(wishlist, presents)); // must return ["Toy Car", "Mini Puzzle"]
-// ```
+
+let guessGifts = (wish, pres) => {
+    let result = [];
+    wish.forEach(item => {
+        pres.forEach(present => {
+            if(
+                item.size === present.size &&
+                item.clatters === present.clatters && 
+                item.weight === present.weight && 
+                !result.includes(item.name)
+                ){
+                    result.push(item.name)
+                }             
+        })
+    });
+    return result
+}
+console.log(guessGifts(wishlist, presents)); // must return ["Toy Car", "Mini Puzzle"]
+///////////5/5//////////////////////////////////////////////////////////////////////////////////////////
