@@ -487,20 +487,21 @@ let maxOfTwo = (x,y) => {
 // }
 console.log(guessGifts(wishlist, presents)); // must return ["Toy Car", "Mini Puzzle"]
 ///////////5/8//////////////////////////////////////////////////////////////////////////////////////////
-let towerBuilder = (n) => {
-    // set up an empty array for tower 
-    let tower = [];
-    //calculate the width of the tower based on number of floors passed on 
-    let width = n * 2 -1;
-    // calculate the number of stars and spaces needed. The number of stars is i * 2 + 1, where i is the current floor number. The number of spaces is calculated by subtracting the number of stars from the width of the tower and dividing by 2
-    for(let i = 0; i < n; i++){
-        let stars = i * 2 + 1;
-        let spaces = (width - stars) /2;
-        // We then create a string floor that combines the correct number of spaces, stars, and spaces using the repeat() method and string concatenation.
-        let floor = ' '.repeat(spaces) + '*'.repeat(stars) + ' '.repeat(spaces);
-        tower.push(floor) 
-    }
-    return tower
-} 
 
-console.log(towerBuilder(5))
+// let towerBuilder = (n) => {
+//     // set up an empty array for tower 
+//     let tower = [];
+//     //calculate the width of the tower based on number of floors passed on 
+//     let width = n * 2 -1;
+//     // calculate the number of stars and spaces needed. The number of stars is i * 2 + 1, where i is the current floor number. The number of spaces is calculated by subtracting the number of stars from the width of the tower and dividing by 2
+//     for(let i = 0; i < n; i++){
+//         let stars = i * 2 + 1;
+//         let spaces = (width - stars) /2;
+//         // We then create a string floor that combines the correct number of spaces, stars, and spaces using the repeat() method and string concatenation.
+//         let floor = ' '.repeat(spaces) + '*'.repeat(stars) + ' '.repeat(spaces);
+//         tower.push(floor) 
+//     }
+//     return tower
+// } 
+
+// console.log(towerBuilder(5))
