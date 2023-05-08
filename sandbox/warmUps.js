@@ -459,31 +459,48 @@ let maxOfTwo = (x,y) => {
 // The order of names in the output doesn’t matter
 // It’s possible, that multiple items from your wish list have the same attribute values. If they match the attributes of one of the presents, add all of them.
 
-var wishlist = [
-    {name: "Mini Puzzle", size: "small", clatters: "yes", weight: "light"},
-    {name: "Toy Car", size: "medium", clatters: "a bit", weight: "medium"},
-    {name: "Card Game", size: "small", clatters: "no", weight: "light"}
-];
-var presents = [
-    {size: "medium", clatters: "a bit", weight: "medium"},
-    {size: "small", clatters: "yes", weight: "light"}
-];
+// var wishlist = [
+//     {name: "Mini Puzzle", size: "small", clatters: "yes", weight: "light"},
+//     {name: "Toy Car", size: "medium", clatters: "a bit", weight: "medium"},
+//     {name: "Card Game", size: "small", clatters: "no", weight: "light"}
+// ];
+// var presents = [
+//     {size: "medium", clatters: "a bit", weight: "medium"},
+//     {size: "small", clatters: "yes", weight: "light"}
+// ];
 
-let guessGifts = (wish, pres) => {
-    let result = [];
-    wish.forEach(item => {
-        pres.forEach(present => {
-            if(
-                item.size === present.size &&
-                item.clatters === present.clatters && 
-                item.weight === present.weight && 
-                !result.includes(item.name)
-                ){
-                    result.push(item.name)
-                }             
-        })
-    });
-    return result
-}
+// let guessGifts = (wish, pres) => {
+//     let result = [];
+//     wish.forEach(item => {
+//         pres.forEach(present => {
+//             if(
+//                 item.size === present.size &&
+//                 item.clatters === present.clatters && 
+//                 item.weight === present.weight && 
+//                 !result.includes(item.name)
+//                 ){
+//                     result.push(item.name)
+//                 }             
+//         })
+//     });
+//     return result
+// }
 console.log(guessGifts(wishlist, presents)); // must return ["Toy Car", "Mini Puzzle"]
-///////////5/5//////////////////////////////////////////////////////////////////////////////////////////
+///////////5/8//////////////////////////////////////////////////////////////////////////////////////////
+let towerBuilder = (n) => {
+    // set up an empty array for tower 
+    let tower = [];
+    //calculate the width of the tower based on number of floors passed on 
+    let width = n * 2 -1;
+    // calculate the number of stars and spaces needed. The number of stars is i * 2 + 1, where i is the current floor number. The number of spaces is calculated by subtracting the number of stars from the width of the tower and dividing by 2
+    for(let i = 0; i < n; i++){
+        let stars = i * 2 + 1;
+        let spaces = (width - stars) /2;
+        // We then create a string floor that combines the correct number of spaces, stars, and spaces using the repeat() method and string concatenation.
+        let floor = ' '.repeat(spaces) + '*'.repeat(stars) + ' '.repeat(spaces);
+        tower.push(floor) 
+    }
+    return tower
+} 
+
+console.log(towerBuilder(5))
