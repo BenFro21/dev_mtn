@@ -513,22 +513,47 @@ let maxOfTwo = (x,y) => {
 // For example:
 // perfectSquare(9) // should return 16 (3x3=9, 4x4=16)
 // perfectSquare(289) // should return 324 (17x17=289 18x18=324)
-// perfectSquare(3000) // should return -1 (sq root of 3000 is 54.77)
+// // perfectSquare(3000) // should return -1 (sq root of 3000 is 54.77)
+// const perfectSquare = (num) => {
+//     // calculate the square root of the given number
+//     const squareRoot = Math.sqrt(num);
+//     // if the square root is an integer, then it is a square. 
+//     if(Number.isInteger(squareRoot)){
+//         // find the next perfect square by adding 1 to the square root and then squareing it 
+//         const nextSquare = Math.pow(squareRoot +1, 2)
+//         return nextSquare
+//     }else{
+//         // if the square root is not an integer, then the number is not a perfect square 
+//         return -1
+//     }
+// }
+// console.log(perfectSquare(9))
+// console.log(perfectSquare(289))
+// console.log(perfectSquare(3000))
 
+//////////////5/10/////////////////////
 
-const perfectSquare = (num) => {
-    // calculate the square root of the given number
-    const squareRoot = Math.sqrt(num);
-    // if the square root is an integer, then it is a square. 
-    if(Number.isInteger(squareRoot)){
-        // find the next perfect square by adding 1 to the square root and then squareing it 
-        const nextSquare = Math.pow(squareRoot +1, 2)
-        return nextSquare
-    }else{
-        // if the square root is not an integer, then the number is not a perfect square 
-        return -1
-    }
-}
-console.log(perfectSquare(9))
-console.log(perfectSquare(289))
-console.log(perfectSquare(3000))
+// let toRoman = (num) => {
+//     const decimal = [1000, 500, 100, 50, 10, 5, 1]
+//     const roman =['M', 'D', 'C', 'L', 'X', 'V', 'I']
+//     let result = '';
+//     //loop through the decimal and Roman arrays 
+//     for(let i = 0; i< decimal.length; i++){
+//         //repeat the current roman numeral as many times as possible 
+//         while(num >= decimal[i]){
+//             result += roman[i]
+//             num -= decimal[i]
+//         }
+//         //check for a special case where the current roman numeral is less than the next one
+//         if(i< decimal.length - 1 && num >= decimal[i] - decimal[i+1]){
+//             result += roman[i+1] + roman[i]
+//             num -= decimal[i] - decimal[i+1]
+//         }
+//     }
+//     return result
+// }
+
+// console.log(toRoman(5))
+// console.log(toRoman(500))
+// console.log(toRoman(5))
+// console.log(toRoman(10))
