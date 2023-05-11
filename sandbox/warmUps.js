@@ -557,3 +557,18 @@ let maxOfTwo = (x,y) => {
 // console.log(toRoman(500))
 // console.log(toRoman(5))
 // console.log(toRoman(10))
+//////////////////////5/11////////////////////////////////////
+```js
+let sortByProduct = (arr) => {
+    //map the values to an array of objects containing value, index, and product
+    const mapArr = arr.map((value, index) => {
+        return {value, index, product: value * (index +1)}
+    })
+    //sort the mapped array by produc in acending order
+    mapArr.sort((a,b) => a.product - b.product)
+    //map the sorted array back to an array of values only 
+    const sortedArr = mapArr.map(obj => obj.value)
+    return sortedArr
+}
+```
+console.log(sortByProduct([23, 2, 3, 4, 5]))
