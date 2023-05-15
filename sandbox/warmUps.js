@@ -558,17 +558,55 @@ let maxOfTwo = (x,y) => {
 // console.log(toRoman(5))
 // console.log(toRoman(10))
 //////////////////////5/11////////////////////////////////////
-```js
-let sortByProduct = (arr) => {
-    //map the values to an array of objects containing value, index, and product
-    const mapArr = arr.map((value, index) => {
-        return {value, index, product: value * (index +1)}
-    })
-    //sort the mapped array by produc in acending order
-    mapArr.sort((a,b) => a.product - b.product)
-    //map the sorted array back to an array of values only 
-    const sortedArr = mapArr.map(obj => obj.value)
-    return sortedArr
+// ```js
+// let sortByProduct = (arr) => {
+//     //map the values to an array of objects containing value, index, and product
+//     const mapArr = arr.map((value, index) => {
+//         return {value, index, product: value * (index +1)}
+//     })
+//     //sort the mapped array by produc in acending order
+//     mapArr.sort((a,b) => a.product - b.product)
+//     //map the sorted array back to an array of values only 
+//     const sortedArr = mapArr.map(obj => obj.value)
+//     return sortedArr
+// }
+// ```
+// console.log(sortByProduct([23, 2, 3, 4, 5]))\
+/////////////////////////////5/15///////////////////////////
+
+let timeWord = (time) =>{
+    //split time string into hours and minutes 
+    const [hours, minutes] = time.split(':').map(Number)
+    //define an array of words for the hours 
+    let hoursWords = ['midnight','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
+    //define an array of words for the tens of minutes
+    const tensWords = ['', '', 'twenty', 'thirty', 'forty', 'fifty']
+    // define an array of words for minutes
+    const onesWords = ['o', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',' eight', 'nine', 'ten', 'eleven' , 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+    // get the word for the hours 
+    let hoursWord = hoursWords[hours % 12]
+    let tens = Math.floor(minutes / 10)
+    let ones = minutes % 10
+    let tensWord = tensWords[tens]
+    let onesWord = onesWords[ones]
+    // determinum am/pm
+    const amPm = hours < 12 ? 'am' : 'pm'
+    if(time ==='00:00'){
+        return 'midnight'
+    }else if(time === '12:00'){
+        return 'noon'
+    }else if(minutes === 0){
+        return `${hoursWord} o'clock ${amPm}`
+    }else if(tens === 0){
+        return `${hoursWord} ${onesWord} ${amPm}`
+    }else if(tens === 1){
+        return `${hoursWord} ${onesWords[minutes]} ${amPm}`
+    }else if(ones === 0){
+        return `${hoursWord} ${tensWord} ${amPm}`
+    }else{
+        return `${hoursWord} ${tensWord} ${onesWord} ${amPm}`
+    }
 }
-```
-console.log(sortByProduct([23, 2, 3, 4, 5]))
+
+console.log(timeWord("06:28"))
+console.log(timeWord("6:00"))
