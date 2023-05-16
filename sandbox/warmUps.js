@@ -574,39 +574,88 @@ let maxOfTwo = (x,y) => {
 // console.log(sortByProduct([23, 2, 3, 4, 5]))\
 /////////////////////////////5/15///////////////////////////
 
-let timeWord = (time) =>{
-    //split time string into hours and minutes 
-    const [hours, minutes] = time.split(':').map(Number)
-    //define an array of words for the hours 
-    let hoursWords = ['midnight','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
-    //define an array of words for the tens of minutes
-    const tensWords = ['', '', 'twenty', 'thirty', 'forty', 'fifty']
-    // define an array of words for minutes
-    const onesWords = ['o', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',' eight', 'nine', 'ten', 'eleven' , 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
-    // get the word for the hours 
-    let hoursWord = hoursWords[hours % 12]
-    let tens = Math.floor(minutes / 10)
-    let ones = minutes % 10
-    let tensWord = tensWords[tens]
-    let onesWord = onesWords[ones]
-    // determinum am/pm
-    const amPm = hours < 12 ? 'am' : 'pm'
-    if(time ==='00:00'){
-        return 'midnight'
-    }else if(time === '12:00'){
-        return 'noon'
-    }else if(minutes === 0){
-        return `${hoursWord} o'clock ${amPm}`
-    }else if(tens === 0){
-        return `${hoursWord} ${onesWord} ${amPm}`
-    }else if(tens === 1){
-        return `${hoursWord} ${onesWords[minutes]} ${amPm}`
-    }else if(ones === 0){
-        return `${hoursWord} ${tensWord} ${amPm}`
-    }else{
-        return `${hoursWord} ${tensWord} ${onesWord} ${amPm}`
-    }
-}
+// let timeWord = (time) =>{
+//     //split time string into hours and minutes 
+//     const [hours, minutes] = time.split(':').map(Number)
+//     //define an array of words for the hours 
+//     let hoursWords = ['midnight','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
+//     //define an array of words for the tens of minutes
+//     const tensWords = ['', '', 'twenty', 'thirty', 'forty', 'fifty']
+//     // define an array of words for minutes
+//     const onesWords = ['o', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',' eight', 'nine', 'ten', 'eleven' , 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+//     // get the word for the hours 
+//     let hoursWord = hoursWords[hours % 12]
+//     let tens = Math.floor(minutes / 10)
+//     let ones = minutes % 10
+//     let tensWord = tensWords[tens]
+//     let onesWord = onesWords[ones]
+//     // determinum am/pm
+//     const amPm = hours < 12 ? 'am' : 'pm'
+//     if(time ==='00:00'){
+//         return 'midnight'
+//     }else if(time === '12:00'){
+//         return 'noon'
+//     }else if(minutes === 0){
+//         return `${hoursWord} o'clock ${amPm}`
+//     }else if(tens === 0){
+//         return `${hoursWord} ${onesWord} ${amPm}`
+//     }else if(tens === 1){
+//         return `${hoursWord} ${onesWords[minutes]} ${amPm}`
+//     }else if(ones === 0){
+//         return `${hoursWord} ${tensWord} ${amPm}`
+//     }else{
+//         return `${hoursWord} ${tensWord} ${onesWord} ${amPm}`
+//     }
+// }
 
-console.log(timeWord("06:28"))
-console.log(timeWord("6:00"))
+// console.log(timeWord("06:28"))
+// console.log(timeWord("6:00"))
+////////////////5/16//////////////////////////////////////
+
+// function calculateRoadTripStats(tripData) {
+//     const result = {
+//       segmentTimes: [],
+//       totalTime: 0,
+//       avgSpeedLimits: []
+//     };
+  
+//     for (let i = 0; i < tripData.speedLimits.length; i++) {
+//       const segment = tripData.speedLimits[i];
+//       const segmentTime = Math.round(segment.distance / segment.speedLimit);
+//       result.segmentTimes.push(segmentTime);
+  
+//       const weightedAverage = tripData.speedLimits.reduce((total, seg) => {
+//         const weight = seg.distance / segment.distance;
+//         return total + seg.speedLimit * weight;
+//       }, 0);
+//       const averageSpeedLimit = Math.round(weightedAverage);
+//       result.avgSpeedLimits.push(averageSpeedLimit);
+//     }
+  
+//     const totalTripTime = result.segmentTimes.reduce((total, time) => total + time, 0);
+//     result.totalTime = totalTripTime;
+  
+//     return result;
+//   }
+  
+//   const tripData = {
+//     name: `Jake's Great Shakes`,
+//     speedLimits: [
+//       {
+//         distance: 100,
+//         speedLimit: 75
+//       },
+//       {
+//         distance: 84,
+//         speedLimit: 70
+//       },
+//       {
+//         distance: 20,
+//         speedLimit: 75
+//       }
+//     ],
+//     traffic: 30
+//   };
+  
+//   const roadTripStats = calculateRoadTripStats(tripData);
+//   console.log(roadTripStats);
