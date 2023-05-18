@@ -29,6 +29,17 @@ class LinkedList {
     isEmpty() {
         return this.head === null
     }
+
+    addToFront(node){
+        node.next = this.head 
+        this.head = node;
+    }
+
+    addtoBack(node){
+       this.tail.next = node
+       this.tail = node
+    }
+
 }
 let list = new LinkedList();
 let vinson = new Node('vinson')

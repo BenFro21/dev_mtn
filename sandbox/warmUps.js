@@ -660,36 +660,65 @@ let maxOfTwo = (x,y) => {
 //   const roadTripStats = calculateRoadTripStats(tripData);
 //   console.log(roadTripStats);
 //////////////////5/17//////////////////////////////
-```js
-let smallestDifference = (arr1, arr2) => {
-    // Sort the arrays in ascending order
-    arr1.sort((a, b) => a - b);
-    arr2.sort((a, b) => a - b);
+// ```js
+// let smallestDifference = (arr1, arr2) => {
+//     // Sort the arrays in ascending order
+//     arr1.sort((a, b) => a - b);
+//     arr2.sort((a, b) => a - b);
   
-    let smallestDiff = Infinity;
-    let i = 0; // Pointer for arr1
-    let j = 0; // Pointer for arr2
+//     let smallestDiff = Infinity;
+//     let i = 0; // Pointer for arr1
+//     let j = 0; // Pointer for arr2
   
-    // Traverse both arrays and update smallestDiff when a smaller difference is found
-    while (i < arr1.length && j < arr2.length) {
-      const diff = Math.abs(arr1[i] - arr2[j]);
-      if (diff < smallestDiff) {
-        smallestDiff = diff;
-      }
+//     // Traverse both arrays and update smallestDiff when a smaller difference is found
+//     while (i < arr1.length && j < arr2.length) {
+//       const diff = Math.abs(arr1[i] - arr2[j]);
+//       if (diff < smallestDiff) {
+//         smallestDiff = diff;
+//       }
   
-      // Move the pointers based on the comparison
-      if (arr1[i] < arr2[j]) {
-        i++;
-      } else {
-        j++;
-      }
-    }
+//       // Move the pointers based on the comparison
+//       if (arr1[i] < arr2[j]) {
+//         i++;
+//       } else {
+//         j++;
+//       }
+//     }
   
-    return smallestDiff;
-  }
+//     return smallestDiff;
+//   }
   
-  const arr1 = [10, 20, 14, 16, 18];
-  const arr2 = [30, 23, 54, 33, 96];
-  const result = smallestDifference(arr1, arr2);
-  console.log(result);
-  ```
+//   const arr1 = [10, 20, 14, 16, 18];
+//   const arr2 = [30, 23, 54, 33, 96];
+//   const result = smallestDifference(arr1, arr2);
+//   console.log(result);
+//   ```
+// ////////////5/18///////////////////
+// function canWin(n) {
+//   if (n <= 1) {
+//     // If there are fewer than 2 stones, the active player loses
+//     return false;
+//   }
+
+//   // Check all possible moves the active player can make
+//   for (let i = 2; i <= 5; i++) {
+//     // If the active player can force the opponent into a losing position, return true
+//     if (!canWin(n - i)) {
+//       return true;
+//     }
+//   }
+
+//   // If none of the moves lead to a winning position, the active player loses
+//   return false;
+// }
+
+// console.log(canWin(1));  // false
+// console.log(canWin(2));  // true
+// console.log(canWin(3));  // true
+// console.log(canWin(4));  // true
+// console.log(canWin(5));  // true
+// console.log(canWin(6));  // true
+// console.log(canWin(7));  // false
+// console.log(canWin(8));  // false
+// console.log(canWin(9));  // true
+// console.log(canWin(10)); // true
